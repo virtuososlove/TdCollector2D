@@ -93,6 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7068041320669889684}
+  - component: {fileID: 6670685459362771779}
+  - component: {fileID: 8605428032071791617}
   m_Layer: 0
   m_Name: StoneMinepf
   m_TagString: Untagged
@@ -116,3 +118,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6670685459362771779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177228517848084531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2592689934c3ee948bb92bf1a2d4c92d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerMax: 2
+--- !u!114 &8605428032071791617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177228517848084531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df917af118cb1246890adc110e87558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: f452d8fdbdfe2564b865d32e97f17f3c, type: 2}

@@ -12,10 +12,8 @@ public class ResourceGenerator : MonoBehaviour
     {
         timer = TimerMax;
         buildingType = GetComponent<BuildingTypeHolder>().buildingType;
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
@@ -23,6 +21,7 @@ public class ResourceGenerator : MonoBehaviour
         {
             timer = TimerMax;
             ResourceManager.Instance.AddResources(buildingType.ResourceGeneratorData.ResourceType, buildingType.ResourceGeneratorData.amount);
+            
         }
     }
 }

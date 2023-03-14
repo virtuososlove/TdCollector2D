@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namestring: Stone Mine
   prefab: {fileID: 5177228517848084531, guid: d806e5bde748e394bbd446d1633a7e1a, type: 3}
+  ResourceGeneratorData:
+    TimerMax: 2
+    ResourceType: {fileID: 11400000, guid: d1ec22486a498734c93675508dc58c91, type: 2}
+    amount: 1

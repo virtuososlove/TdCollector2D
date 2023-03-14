@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namestring: Gold Mine
   prefab: {fileID: 6466744321830023646, guid: a9f14e5822d1c7f459285bda1cdcd0a0, type: 3}
+  ResourceGeneratorData:
+    TimerMax: 4
+    ResourceType: {fileID: 11400000, guid: 2fe963ba09b06184dad9b72d428b7c5b, type: 2}
+    amount: 1
