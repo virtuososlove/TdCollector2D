@@ -5,7 +5,7 @@ using System;
 
 public class ResourceManager : MonoBehaviour
 {
-    public static ResourceManager Instance;
+    public static ResourceManager Instance { get; private set; }
 
     private Dictionary<ResourceTypeSO, int> ResourceTypeDictionary;
     private ResourceTypeListSO ResourceTypeList;
