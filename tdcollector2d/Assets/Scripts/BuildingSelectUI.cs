@@ -16,7 +16,6 @@ public class BuildingSelectUI : MonoBehaviour
     {
         ArrowButtonTMP.GetComponent<Button>().onClick.AddListener(() => {
             BuildingManager.Instance.SetactiveBuildingType(null);
-            UpdateActiveBuildingType();
         });
 
         buildingTypeList = Resources.Load<BuildingTypeListSO>(typeof(BuildingTypeListSO).Name);
@@ -34,12 +33,22 @@ public class BuildingSelectUI : MonoBehaviour
             buildingButton.Find("Image").GetComponent<Image>().sprite = buildingType.sprite;
             buildingButton.GetComponent<Button>().onClick.AddListener(() => {
                 BuildingManager.Instance.SetactiveBuildingType(buildingType);
-                UpdateActiveBuildingType();
+                
             });
             
             Amountindex++;
         }
     }
+    private void Start()
+    {
+        BuildingManager.Instance.onActiveBuildingTypeChanged += BuildingManager_onActiveBuildingTypeChanged;
+    }
+
+    private void BuildingManager_onActiveBuildingTypeChanged(object sender, BuildingManager.onActiveBuildingTypeChangedEventArgs e)
+    {
+        UpdateActiveBuildingType();
+    }
+
     private void UpdateActiveBuildingType()
     {
         ArrowButtonTMP.Find("Outline").gameObject.SetActive(false);
