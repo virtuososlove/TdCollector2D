@@ -10,5 +10,7 @@ public class ResourceGeneratorData
     public int amount;
     public float maxRadius;
     public int maxResourceNodeCounter;
+    public float canConstractScanZone;
+    public float maxDistanceBetweenBuildings;
 
 }

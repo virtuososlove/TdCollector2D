@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9ab0f75546ac2f4e9f31568d0751761, type: 3}
-  m_Name: StoneMine
+  m_Name: TownHall
   m_EditorClassIdentifier: 
-  Namestring: Stone Mine
-  prefab: {fileID: 5177228517848084531, guid: d806e5bde748e394bbd446d1633a7e1a, type: 3}
+  Namestring: TownHall
+  prefab: {fileID: 103954653617403621, guid: a342e8de060d4b244a4e9a8a8397c8c6, type: 3}
   ResourceGeneratorData:
-    TimerMax: 2
-    ResourceType: {fileID: 11400000, guid: d1ec22486a498734c93675508dc58c91, type: 2}
+    TimerMax: 1
+    ResourceType: {fileID: 11400000, guid: 1ca97ee167483a741b87f9a5c7c41da5, type: 2}
     amount: 1
-    maxRadius: 4
-    maxResourceNodeCounter: 4
+    maxRadius: 10
+    maxResourceNodeCounter: 2
     canConstractScanZone: 7
-  sprite: {fileID: 21300000, guid: 2263e91ebcd2a254dab5f4caccb4a7af, type: 3}
+  sprite: {fileID: 21300000, guid: 7030b8e3eb49e8440ae8eb3ec8b45d05, type: 3}

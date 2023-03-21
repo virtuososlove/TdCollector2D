@@ -21,7 +21,7 @@ public class BuildingManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(activeBuildingType != null && !EventSystem.current.IsPointerOverGameObject())
+            if(activeBuildingType != null && !EventSystem.current.IsPointerOverGameObject() && canConstructBuild(UtilsClass.GetMousePosition(), activeBuildingType))
             {
                 Instantiate(activeBuildingType.prefab, UtilsClass.GetMousePosition(), Quaternion.identity);
 
@@ -39,4 +39,40 @@ public class BuildingManager : MonoBehaviour
     {
         return activeBuildingType;
     }
-}
+    private bool canConstructBuild(Vector3 position, BuildingTypeSO buildingType)
+    {
+        BoxCollider2D boxCollider2D = buildingType.prefab.GetComponent<BoxCollider2D>();
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(position, boxCollider2D.size,0);
+        if(colliders.Length != 0)
+        {
+            return false;
+        }
+        colliders = Physics2D.OverlapCircleAll(position, activeBuildingType.ResourceGeneratorData.canConstractScanZone);
+
+        foreach ( Collider2D collider in colliders)
+        {
+            if(collider.GetComponent<BuildingTypeHolder>() != null)
+            {
+                if (buildingType == collider.GetComponent<BuildingTypeHolder>().buildingType)
+                {
+                    return false;
+                }
+            }
+        }
+        float maxConstructionRadius = 25;
+        colliders = Physics2D.OverlapCircleAll(position, maxConstructionRadius);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<BuildingTypeHolder>() != null)
+            {
+                
+                return true;
+                
+            }
+        }
+
+
+
+        return false;
+    }
+}   

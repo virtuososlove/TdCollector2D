@@ -11,7 +11,7 @@ public class BuildingSelectUI : MonoBehaviour
     public Transform ArrowButtonTMP;
     private Dictionary<BuildingTypeSO, Transform> BuildingButtonTransformDict;
     int Amountindex = 1;
-
+    public List<BuildingTypeSO> dontCareTypeList;
     private void Awake()
     {
         ArrowButtonTMP.GetComponent<Button>().onClick.AddListener(() => {
@@ -25,6 +25,10 @@ public class BuildingSelectUI : MonoBehaviour
         BuildingSelectBtnTemp.gameObject.SetActive(false); 
         foreach (BuildingTypeSO buildingType in buildingTypeList.list)
         {
+            if (dontCareTypeList.Contains(buildingType))
+            {
+                continue;
+            }
             Transform buildingButton = Instantiate(BuildingSelectBtnTemp, transform);
             buildingButton.gameObject.SetActive(true);
             BuildingButtonTransformDict[buildingType] = buildingButton;
@@ -52,7 +56,7 @@ public class BuildingSelectUI : MonoBehaviour
     private void UpdateActiveBuildingType()
     {
         ArrowButtonTMP.Find("Outline").gameObject.SetActive(false);
-        foreach (BuildingTypeSO buildingType in buildingTypeList.list)
+        foreach (BuildingTypeSO buildingType in BuildingButtonTransformDict.Keys)
         {
             BuildingButtonTransformDict[buildingType].Find("Outline").gameObject.SetActive(false);
         }

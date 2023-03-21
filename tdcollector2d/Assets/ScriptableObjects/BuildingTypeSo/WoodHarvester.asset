@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: WoodHarvester
   m_EditorClassIdentifier: 
   Namestring: Wood Harvester
-  prefab: {fileID: 103954653617403621, guid: a342e8de060d4b244a4e9a8a8397c8c6, type: 3}
+  prefab: {fileID: 103954653617403621, guid: 9da0b882ab192ce48852a5567fae6798, type: 3}
   ResourceGeneratorData:
     TimerMax: 1
     ResourceType: {fileID: 11400000, guid: 1ca97ee167483a741b87f9a5c7c41da5, type: 2}
     amount: 1
     maxRadius: 5
     maxResourceNodeCounter: 7
+    canConstractScanZone: 7
+    maxDistanceBetweenBuildings: 25
   sprite: {fileID: 21300000, guid: 793ca27a5a3378149aaa12abe85933f4, type: 3}

@@ -7,11 +7,11 @@ public class BuildingGhost : MonoBehaviour
     void Start()
     {
         BuildingManager.Instance.onActiveBuildingTypeChanged += BuildingManager_onActiveBuildingTypeChanged;
+        Hide();
 
     }
     private void Awake()
     {
-        Hide();
 
     }
 
