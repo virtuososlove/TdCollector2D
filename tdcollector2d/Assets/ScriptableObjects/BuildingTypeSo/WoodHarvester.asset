@@ -18,8 +18,7 @@ MonoBehaviour:
     TimerMax: 1
     ResourceType: {fileID: 11400000, guid: 1ca97ee167483a741b87f9a5c7c41da5, type: 2}
     amount: 1
-    maxRadius: 5
+    maxRadius: 7
     maxResourceNodeCounter: 7
     canConstractScanZone: 7
-    maxDistanceBetweenBuildings: 25
   sprite: {fileID: 21300000, guid: 793ca27a5a3378149aaa12abe85933f4, type: 3}

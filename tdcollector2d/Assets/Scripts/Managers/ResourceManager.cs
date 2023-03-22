@@ -34,4 +34,29 @@ public class ResourceManager : MonoBehaviour
         int amount = ResourceTypeDictionary[ResourceType];
         return amount;
     }
+    public bool CanAffordForBuild(BuildingCosts[] buildingCostArray)
+    {
+        foreach (BuildingCosts buildingCost in buildingCostArray)
+        {
+            if (  buildingCost.cost < GetResourceAmount(buildingCost.resourceType))
+            {
+                return true;
+
+            }
+            
+           
+        }
+        return false;
+    }
+    public void DeleteResources(BuildingCosts[] buildingCostArray)
+    {
+        foreach (BuildingCosts buildingCost in buildingCostArray)
+        {
+            ResourceTypeDictionary[buildingCost.resourceType] -= buildingCost.cost;
+            if (OnResourceAmountChanged != null)
+            {
+                OnResourceAmountChanged(this, EventArgs.Empty);
+            }
+        }
+    }
 }

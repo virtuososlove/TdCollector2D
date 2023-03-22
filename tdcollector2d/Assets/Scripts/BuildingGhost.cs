@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class BuildingGhost : MonoBehaviour
 {
+    private BuildingEficciency buildingEficciency;
+    private GameObject spriteGameObject;
     void Start()
     {
         BuildingManager.Instance.onActiveBuildingTypeChanged += BuildingManager_onActiveBuildingTypeChanged;
+        spriteGameObject = transform.Find("Sprite").gameObject;
+        buildingEficciency = transform.Find("BuildingEfficency").GetComponent<BuildingEficciency>();
         Hide();
 
     }
@@ -24,6 +28,7 @@ public class BuildingGhost : MonoBehaviour
         else
         {
             Show(e.activeBuildingType.sprite);
+            buildingEficciency.show(e.activeBuildingType.ResourceGeneratorData);
         } 
     }
 
@@ -34,7 +39,7 @@ public class BuildingGhost : MonoBehaviour
     private void Show(Sprite sprite)
     {
         gameObject.SetActive(true);
-        gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        spriteGameObject.GetComponent<SpriteRenderer>().sprite = sprite;
     }
     private void Hide()
     {

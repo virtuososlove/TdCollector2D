@@ -23,7 +23,12 @@ public class BuildingManager : MonoBehaviour
         {
             if(activeBuildingType != null && !EventSystem.current.IsPointerOverGameObject() && canConstructBuild(UtilsClass.GetMousePosition(), activeBuildingType))
             {
-                Instantiate(activeBuildingType.prefab, UtilsClass.GetMousePosition(), Quaternion.identity);
+                if (ResourceManager.Instance.CanAffordForBuild(activeBuildingType.buildingCosts))
+                {
+                    ResourceManager.Instance.DeleteResources(activeBuildingType.buildingCosts);
+                    Instantiate(activeBuildingType.prefab, UtilsClass.GetMousePosition(), Quaternion.identity);
+
+                }
 
             }
 
@@ -64,15 +69,11 @@ public class BuildingManager : MonoBehaviour
         foreach (Collider2D collider in colliders)
         {
             if (collider.GetComponent<BuildingTypeHolder>() != null)
-            {
-                
-                return true;
-                
+            {             
+                return true; 
             }
         }
-
-
-
         return false;
     }
+    
 }   
