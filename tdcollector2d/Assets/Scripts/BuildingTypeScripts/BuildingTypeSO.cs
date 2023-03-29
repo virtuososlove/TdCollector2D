@@ -9,4 +9,14 @@ public class BuildingTypeSO : ScriptableObject
     public ResourceGeneratorData ResourceGeneratorData;
     public Sprite sprite;
     public BuildingCosts[] buildingCosts;
+    public string GetbuildingCostString()
+    {
+        string str = "";
+        foreach(BuildingCosts buildingCost in buildingCosts)
+        {
+            str += buildingCost.resourceType.nameString + ": " + buildingCost.cost.ToString();
+        }
+       
+        return str;
+    }
 }

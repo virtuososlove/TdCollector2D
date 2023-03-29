@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 
 public class BuildingSelectUI : MonoBehaviour
 {
@@ -12,8 +12,10 @@ public class BuildingSelectUI : MonoBehaviour
     private Dictionary<BuildingTypeSO, Transform> BuildingButtonTransformDict;
     int Amountindex = 1;
     public List<BuildingTypeSO> dontCareTypeList;
+    private TooltipUI tooltipUI;
     private void Awake()
     {
+        tooltipUI = TooltipUI.Instance;
         ArrowButtonTMP.GetComponent<Button>().onClick.AddListener(() => {
             BuildingManager.Instance.SetactiveBuildingType(null);
         });
@@ -25,24 +27,36 @@ public class BuildingSelectUI : MonoBehaviour
         BuildingSelectBtnTemp.gameObject.SetActive(false); 
         foreach (BuildingTypeSO buildingType in buildingTypeList.list)
         {
-            if (dontCareTypeList.Contains(buildingType))
-            {
-                continue;
-            }
+            if (dontCareTypeList.Contains(buildingType))continue;
+            
             Transform buildingButton = Instantiate(BuildingSelectBtnTemp, transform);
             buildingButton.gameObject.SetActive(true);
             BuildingButtonTransformDict[buildingType] = buildingButton;
-           
-            buildingButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(+130 * Amountindex,0);
+
+            float offsetAmount = 130;
+            buildingButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(offsetAmount * Amountindex,0);
             buildingButton.Find("Image").GetComponent<Image>().sprite = buildingType.sprite;
             buildingButton.GetComponent<Button>().onClick.AddListener(() => {
                 BuildingManager.Instance.SetactiveBuildingType(buildingType);
-                
             });
-            
+
             Amountindex++;
+
+            buildingButton.GetComponent<OnMouseEnterExit>().onMouseEnter += (object sender, EventArgs e) => {
+                tooltipUI.Show(buildingType.Namestring + "\n" + buildingType.GetbuildingCostString());
+            };
+
+            buildingButton.GetComponent<OnMouseEnterExit>().onMouseExit += (object sender, EventArgs e) =>
+            {
+                tooltipUI.Hide();
+            };
         }
     }
+
+   
+
+    
+
     private void Start()
     {
         BuildingManager.Instance.onActiveBuildingTypeChanged += BuildingManager_onActiveBuildingTypeChanged;

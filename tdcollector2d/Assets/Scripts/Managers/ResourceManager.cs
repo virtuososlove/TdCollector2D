@@ -38,15 +38,18 @@ public class ResourceManager : MonoBehaviour
     {
         foreach (BuildingCosts buildingCost in buildingCostArray)
         {
-            if (  buildingCost.cost < GetResourceAmount(buildingCost.resourceType))
+            if (buildingCost.cost < GetResourceAmount(buildingCost.resourceType))
             {
-                return true;
 
+                
+            }
+            else
+            {
+                return false;
             }
             
-           
         }
-        return false;
+        return true;
     }
     public void DeleteResources(BuildingCosts[] buildingCostArray)
     {
