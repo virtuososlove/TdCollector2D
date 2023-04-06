@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: -5268168731141560446}
   - component: {fileID: -8018427988871055132}
   - component: {fileID: 5115450712066661792}
+  - component: {fileID: 4741230691127383358}
+  - component: {fileID: 6607066794652745195}
   m_Layer: 0
   m_Name: WoodHarvesterPf 1
   m_TagString: Untagged
@@ -48,9 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2592689934c3ee948bb92bf1a2d4c92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerMax: 0
-  timer: 0
-  resourceNodeCounter: 0
 --- !u!114 &-8018427988871055132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +89,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.083356, y: 4.676796}
   m_EdgeRadius: 0
+--- !u!114 &4741230691127383358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103954653617403621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459c96d1b9910f84abd7c1557c52160b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+--- !u!114 &6607066794652745195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103954653617403621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52687345dba305e45b62abdbe8e65b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &334842280798251711
 PrefabInstance:
   m_ObjectHideFlags: 0

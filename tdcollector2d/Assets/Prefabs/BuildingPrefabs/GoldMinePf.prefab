@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: -1174089886508303046}
   - component: {fileID: 3981386429489543455}
   - component: {fileID: 9151478279372185946}
+  - component: {fileID: 749244359973165622}
+  - component: {fileID: 4466293737980861276}
   m_Layer: 0
   m_Name: GoldMinePf
   m_TagString: Untagged
@@ -48,7 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2592689934c3ee948bb92bf1a2d4c92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceNodeCounter: 0
 --- !u!114 &3981386429489543455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +89,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.057659, y: 4.879176}
   m_EdgeRadius: 0
+--- !u!114 &749244359973165622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466744321830023646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52687345dba305e45b62abdbe8e65b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4466293737980861276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6466744321830023646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459c96d1b9910f84abd7c1557c52160b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
 --- !u!1001 &5371408073967530642
 PrefabInstance:
   m_ObjectHideFlags: 0

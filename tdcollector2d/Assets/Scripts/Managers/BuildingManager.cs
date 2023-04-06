@@ -9,6 +9,7 @@ public class BuildingManager : MonoBehaviour
     public GameObject prefab;
     private BuildingTypeSO activeBuildingType;
     public event EventHandler<onActiveBuildingTypeChangedEventArgs> onActiveBuildingTypeChanged;
+    [SerializeField] Building HQbuilding;
     public class onActiveBuildingTypeChangedEventArgs : EventArgs
     {
         public BuildingTypeSO activeBuildingType;
@@ -91,4 +92,8 @@ public class BuildingManager : MonoBehaviour
         return false;
     }
     
+    public Building GetHQBuilding()
+    {
+        return HQbuilding;
+    }
 }   

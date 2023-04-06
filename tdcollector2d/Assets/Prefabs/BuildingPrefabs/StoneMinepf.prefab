@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6670685459362771779}
   - component: {fileID: 8605428032071791617}
   - component: {fileID: 1291526079659249888}
+  - component: {fileID: 1323874677863370217}
+  - component: {fileID: 3716891327086636238}
   m_Layer: 0
   m_Name: StoneMinepf
   m_TagString: Untagged
@@ -48,7 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2592689934c3ee948bb92bf1a2d4c92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceNodeCounter: 0
 --- !u!114 &8605428032071791617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +89,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.1661215, y: 4.8807697}
   m_EdgeRadius: 0
+--- !u!114 &1323874677863370217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177228517848084531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52687345dba305e45b62abdbe8e65b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3716891327086636238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177228517848084531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459c96d1b9910f84abd7c1557c52160b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
 --- !u!1001 &332704086169900362
 PrefabInstance:
   m_ObjectHideFlags: 0
