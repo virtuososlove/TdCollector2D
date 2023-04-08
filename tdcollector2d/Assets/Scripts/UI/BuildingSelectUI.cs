@@ -33,7 +33,7 @@ public class BuildingSelectUI : MonoBehaviour
             buildingButton.gameObject.SetActive(true);
             BuildingButtonTransformDict[buildingType] = buildingButton;
 
-            float offsetAmount = 130;
+            float offsetAmount = 80;
             buildingButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(offsetAmount * Amountindex,0);
             buildingButton.Find("Image").GetComponent<Image>().sprite = buildingType.sprite;
             buildingButton.GetComponent<Button>().onClick.AddListener(() => {

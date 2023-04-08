@@ -25,7 +25,7 @@ public class ResourcesUI : MonoBehaviour
             ResourceTransformDictionary[ResourceType] = resourceTransform;
             
             resourceTransform.Find("Image").GetComponent<Image>().sprite = ResourceType.Sprite;
-            resourceTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(-160 * Amountindex, 0);
+            resourceTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(-120 * Amountindex, 0);
             
             int resourceAmount = ResourceManager.Instance.GetResourceAmount(ResourceType);
             resourceTransform.Find("Text").GetComponent<TextMeshProUGUI>().SetText(resourceAmount.ToString());
