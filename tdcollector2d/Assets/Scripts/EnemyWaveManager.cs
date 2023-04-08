@@ -79,4 +79,8 @@ public class EnemyWaveManager : MonoBehaviour
     {
         return nextWaveSpawntimer;
     }
+    public Transform GetNextWaveSpawnPosition()
+    {
+        return nextWaveSpawnPosition;
+    }
 }
