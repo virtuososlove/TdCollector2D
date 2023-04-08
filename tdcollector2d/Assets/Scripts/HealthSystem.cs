@@ -6,18 +6,12 @@ using System;
 public class HealthSystem : MonoBehaviour
 {
     private float currentHealth;
-    private float maxHealth;
+    [SerializeField] float maxHealth;
     public event EventHandler onDamaged;
     public event EventHandler onDied;
-    void Start()
+    private void Awake()
     {
-    
-     
-    }
-
-    void Update()
-    {
-       
+        currentHealth = maxHealth;
     }
     public void TakeDamage(int damageAmount)
     {

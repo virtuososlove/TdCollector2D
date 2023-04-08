@@ -22,8 +22,14 @@ public class BuildingEficciency : MonoBehaviour
     }
     public void show(ResourceGeneratorData resourceGeneratorData)
     {
+        gameObject.SetActive(true);
+
         this.resourceGeneratorData = resourceGeneratorData;
 
         spriteRenderer.sprite = resourceGeneratorData.ResourceType.Sprite;
+    }
+    public void hide()
+    {
+        gameObject.SetActive(false);
     }
 }

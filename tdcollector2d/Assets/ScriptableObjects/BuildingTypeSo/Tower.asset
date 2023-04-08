@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9ab0f75546ac2f4e9f31568d0751761, type: 3}
-  m_Name: StoneMine
+  m_Name: Tower
   m_EditorClassIdentifier: 
-  Namestring: Stone Mine
-  prefab: {fileID: 5177228517848084531, guid: d806e5bde748e394bbd446d1633a7e1a, type: 3}
-  canGenerateResource: 1
+  Namestring: TownHall
+  prefab: {fileID: 103954653617403621, guid: 6c6a537a06c7f234e87fd752face0ada, type: 3}
+  canGenerateResource: 0
   ResourceGeneratorData:
-    TimerMax: 2
-    ResourceType: {fileID: 11400000, guid: d1ec22486a498734c93675508dc58c91, type: 2}
-    amount: 1
-    maxRadius: 7
-    maxResourceNodeCounter: 4
+    TimerMax: 0
+    ResourceType: {fileID: 0}
+    amount: 0
+    maxRadius: 0
+    maxResourceNodeCounter: 0
     canConstractScanZone: 7
-  sprite: {fileID: 21300000, guid: 2263e91ebcd2a254dab5f4caccb4a7af, type: 3}
-  MaxHealthAmount: 80
+  sprite: {fileID: 21300000, guid: 3a549cd61f4d79e4b996c9978dac641f, type: 3}
+  MaxHealthAmount: 70
   buildingCosts:
   - resourceType: {fileID: 11400000, guid: 1ca97ee167483a741b87f9a5c7c41da5, type: 2}
     cost: 1
+  - resourceType: {fileID: 11400000, guid: d1ec22486a498734c93675508dc58c91, type: 2}
+    cost: 0

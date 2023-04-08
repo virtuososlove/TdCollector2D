@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namestring: Gold Mine
   prefab: {fileID: 6466744321830023646, guid: a9f14e5822d1c7f459285bda1cdcd0a0, type: 3}
+  canGenerateResource: 1
   ResourceGeneratorData:
     TimerMax: 3
     ResourceType: {fileID: 11400000, guid: 2fe963ba09b06184dad9b72d428b7c5b, type: 2}
@@ -24,7 +25,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 8ead931dd91bff8489e75de9c414f17f, type: 3}
   MaxHealthAmount: 80
   buildingCosts:
-  - resourceType: {fileID: 11400000, guid: d1ec22486a498734c93675508dc58c91, type: 2}
-    cost: 5
   - resourceType: {fileID: 11400000, guid: 1ca97ee167483a741b87f9a5c7c41da5, type: 2}
-    cost: 50
+    cost: 1
+  - resourceType: {fileID: 11400000, guid: d1ec22486a498734c93675508dc58c91, type: 2}
+    cost: 0

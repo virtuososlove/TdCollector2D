@@ -28,7 +28,15 @@ public class BuildingGhost : MonoBehaviour
         else
         {
             Show(e.activeBuildingType.sprite);
-            buildingEficciency.show(e.activeBuildingType.ResourceGeneratorData);
+            if(e.activeBuildingType.canGenerateResource == true)
+            {
+                buildingEficciency.show(e.activeBuildingType.ResourceGeneratorData);
+
+            }
+            else
+            {
+                buildingEficciency.hide();
+            }
         } 
     }
 

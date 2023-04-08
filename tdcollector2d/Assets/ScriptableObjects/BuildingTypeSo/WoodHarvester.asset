@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namestring: Wood Harvester
   prefab: {fileID: 103954653617403621, guid: 9da0b882ab192ce48852a5567fae6798, type: 3}
+  canGenerateResource: 1
   ResourceGeneratorData:
     TimerMax: 1
     ResourceType: {fileID: 11400000, guid: 1ca97ee167483a741b87f9a5c7c41da5, type: 2}
@@ -25,4 +26,4 @@ MonoBehaviour:
   MaxHealthAmount: 80
   buildingCosts:
   - resourceType: {fileID: 11400000, guid: 1ca97ee167483a741b87f9a5c7c41da5, type: 2}
-    cost: 15
+    cost: 1

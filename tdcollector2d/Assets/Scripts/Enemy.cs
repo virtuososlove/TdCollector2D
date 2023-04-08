@@ -16,12 +16,19 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     private float targetTimer;
     private float targetTimerMax = 0.2f;
+   
     void Start()
     {
+        GetComponent<HealthSystem>().onDied += Enemy_onDied;
         rigidbody2d = GetComponent<Rigidbody2D>();
         HQBuilding = BuildingManager.Instance.GetHQBuilding();
         targetTransform = HQBuilding.transform;
         targetTimer = Random.Range(0, targetTimerMax);
+    }
+
+    private void Enemy_onDied(object sender, System.EventArgs e)
+    {
+        Destroy(gameObject);
     }
 
     void Update()
